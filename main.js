@@ -43,5 +43,5 @@ pybutton.addEventListener('click', () => {
 });
 
 javabutton.addEventListener('click', () => { 
-		img.src = "images/Javaemoji.png";
+		img.src = "images/javaemoji.png";
 	});
