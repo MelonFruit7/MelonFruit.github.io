@@ -6,20 +6,16 @@ const pybutton = document.querySelector('#py');
 let money = 0;
 let checkjs = false;
 let checkpy = false;
+let selected = 1;
 
 img.addEventListener('click', () => {
-	if (checkpy)  {
-		money += 4;
-	} else if (checkjs) {
-		money += 2;
-	} else {
-		money++;
-	}
+	money += selected;
 document.querySelector("#amount").innerText = "You have $"+money;
 });
 
 jsbutton.addEventListener('click', () => {
 	if (money >= 100 || checkjs) {
+		selected = 2;
 		jsbutton.innerText = "Unlocked JS";
 		img.src = "images/Javascript.png";
 		if (!checkjs) {
@@ -32,6 +28,7 @@ jsbutton.addEventListener('click', () => {
 
 pybutton.addEventListener('click', () => {
 	if (money >= 400 || checkpy) {
+		selected = 4;
 		pybutton.innerText = "Unlocked Python";
 		img.src = "images/Python.png";
 		if (!checkpy) {
@@ -43,5 +40,6 @@ pybutton.addEventListener('click', () => {
 });
 
 javabutton.addEventListener('click', () => { 
+		selected = 1;
 		img.src = "images/javaemoji.png";
 	});
