@@ -3,10 +3,13 @@ const jsbutton = document.querySelector('#js');
 const javabutton = document.querySelector('#java');
 const pybutton = document.querySelector('#py');
 
+const upgradebutton = document.querySelector('#upgrade');
+
 let money = 0;
 let checkjs = false;
 let checkpy = false;
 let selected = 1;
+let upgradecost = 100;
 
 img.addEventListener('click', () => {
 	money += selected;
@@ -43,3 +46,13 @@ javabutton.addEventListener('click', () => {
 		selected = 1;
 		img.src = "images/javaemoji.png";
 	});
+
+upgradebutton.addEventListener('click', () => { 
+	if (money >= upgradecost) {
+		money -= upgradecost;
+		upgradecost = Math.floor(upgradecost * 1.5);
+		selected *= 2;
+		document.querySelector("#amount").innerText = "You have $"+money;
+		upgradebutton.innerText = "Upgrade Click need $"+upgradecost;
+	}
+})

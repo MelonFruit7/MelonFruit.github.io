@@ -91,6 +91,18 @@ h2{
 	box-sizing: border-box;
 }
 
+#upgrade{
+	position: absolute;
+	left: 0;
+	top: 0px;
+	margin-right: 20px;
+
+	background: linear-gradient(white,cyan);
+	padding: 5px;
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
 #amount{
 	margin-top: 20px;
 }
