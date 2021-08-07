@@ -27,7 +27,6 @@ body{
 
 @keyframes Welcome{
 	0%{transform: translate(-1200px,0);}
-	25%{transform: rotate(360deg);}
 }
 
 h2{
